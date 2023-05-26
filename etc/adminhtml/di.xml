@@ -7,7 +7,7 @@
     <type name="Magento\Config\Model\Config\TypePool">
         <arguments>
             <argument name="sensitive" xsi:type="array">
-                <item name="system/admin/autologin_email" xsi:type="string">1</item>
+                <item name="system/admin/autologin_username" xsi:type="string">1</item>
             </argument>
         </arguments>
     </type>
