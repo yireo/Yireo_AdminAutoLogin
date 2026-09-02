@@ -1,22 +1,23 @@
 {
-  "name": "yireo/magento2-admin-auto-login",
-  "version": "1.0.1",
-  "description": "N/A",
-  "type": "magento2-module",
-  "require": {
-    "magento/framework": "^101.0|^102.0|^103.0",
-    "magento/module-backend": "^101.0|^102.0",
-    "magento/module-user": "^101.0"
-  },
-  "license": [
-    "OSL-3.0"
-  ],
-  "autoload": {
-    "files": [
-      "registration.php"
+    "name": "yireo/magento2-admin-auto-login",
+    "version": "1.0.1",
+    "description": "N/A",
+    "type": "magento2-module",
+    "require": {
+        "magento/framework": "^101.0|^102.0|^103.0",
+        "magento/module-backend": "^101.0|^102.0",
+        "magento/module-user": "^101.0",
+        "php": ">=8.2 <8.6"
+    },
+    "license": [
+        "OSL-3.0"
     ],
-    "psr-4": {
-      "Yireo\\AdminAutoLogin\\": ""
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Yireo\\AdminAutoLogin\\": ""
+        }
     }
-  }
 }
