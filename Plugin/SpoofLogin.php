@@ -44,6 +44,6 @@ class SpoofLogin
 
     private function getUsername(): string
     {
-        return trim((string)$this->scopeConfig->getValue('system/admin/autologin_username'));
+        return trim((string)$this->scopeConfig->getValue('system/admin/autologin_username'), " \n\r\t\v\0");
     }
 }
