@@ -4,5 +4,7 @@
     "sequence": [
         "Magento_Backend",
         "Magento_User"
-    ]
+    ],
+    "phpcs_severity": "7",
+    "phpstan_level": "5"
 }
