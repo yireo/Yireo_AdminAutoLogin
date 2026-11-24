@@ -3,9 +3,9 @@
     "composer_name": "yireo/magento2-admin-auto-login",
     "sequence": [
         "Magento_Backend",
-        "Magento_Config",
+        "Magento_Security",
         "Magento_User"
     ],
-    "phpcs_severity": "7",
+    "phpcs_severity": "6",
     "phpstan_level": "5"
 }
