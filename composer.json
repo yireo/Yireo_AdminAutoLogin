@@ -1,6 +1,6 @@
 {
     "name": "yireo/magento2-admin-auto-login",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "description": "Development-only Magento 2 module that automatically logs in a configured admin user (developer mode, env.php flag and IP allowlist required)",
     "keywords": [
         "magento",
