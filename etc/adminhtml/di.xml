@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <type name="Magento\Backend\Model\Auth\StorageInterface" >
-        <plugin name="Yireo_AdminAutoLogin::spoofLogin" type="Yireo\AdminAutoLogin\Plugin\SpoofLogin" />
+    <type name="Magento\Backend\App\AbstractAction">
+        <plugin name="Yireo_AdminAutoLogin::autoLogin" type="Yireo\AdminAutoLogin\Plugin\AutoLoginBeforeDispatch" sortOrder="10"/>
     </type>
 
     <type name="Magento\Config\Model\Config\TypePool">

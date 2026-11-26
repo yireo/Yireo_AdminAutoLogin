@@ -1,22 +1,35 @@
 {
-  "name": "yireo/magento2-admin-auto-login",
-  "version": "1.0.1",
-  "description": "N/A",
-  "type": "magento2-module",
-  "require": {
-    "magento/framework": "^101.0|^102.0|^103.0",
-    "magento/module-backend": "^101.0|^102.0",
-    "magento/module-user": "^101.0"
-  },
-  "license": [
-    "OSL-3.0"
-  ],
-  "autoload": {
-    "files": [
-      "registration.php"
+    "name": "yireo/magento2-admin-auto-login",
+    "version": "1.0.2",
+    "description": "Development-only Magento 2 module that automatically logs in a configured admin user (developer mode and IP allowlist required)",
+    "keywords": [
+        "magento",
+        "magento2",
+        "development",
+        "admin",
+        "autologin"
     ],
-    "psr-4": {
-      "Yireo\\AdminAutoLogin\\": ""
+    "type": "magento2-module",
+    "require": {
+        "magento/framework": "^101.0|^102.0|^103.0",
+        "magento/module-backend": "^101.0|^102.0",
+        "magento/module-config": "^101.0",
+        "magento/module-security": "^100.3",
+        "magento/module-user": "^101.0",
+        "php": ">=7.4",
+        "psr/log": "^1.0 || ^2.0 || ^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5 || ^10.5",
+        "yireo/magento2-integration-test-helper": "~0.0"
+    },
+    "license": "OSL-3.0",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Yireo\\AdminAutoLogin\\": ""
+        }
     }
-  }
 }
