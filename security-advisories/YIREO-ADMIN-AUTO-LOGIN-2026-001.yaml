@@ -1,0 +1,41 @@
+schema_version: "1.6.0"
+id: YIREO-ADMIN-AUTO-LOGIN-2026-001
+published: "2026-11-25T00:00:00Z"
+modified: "2026-11-26T00:00:00Z"
+aliases: []
+summary: Unauthenticated Admin Panel access when the auto-login setting reaches a non-development environment
+details: >
+  In versions 1.0.0 and 1.0.1 the automatic admin login was enabled solely by the database setting
+  system/admin/autologin_username. No check was done on the Magento deploy mode, the client IP address or
+  the state of the configured admin user. When the module was installed and this setting ended up in a
+  production or publicly reachable database (for instance via a copied development database), any
+  unauthenticated visitor reaching the Admin Panel was logged in as the configured admin user, even when
+  that user was inactive or locked. Version 1.0.2 keeps the database setting, but only performs the auto-login
+  in developer mode and for client IPs on an allowlist (localhost and private networks by default, configurable
+  in app/etc/env.php), only logs in active and unlocked users via the regular login flow and logs every
+  auto-login. Version 2.0.0 additionally moves the configuration to app/etc/env.php and requires an explicit
+  enabled flag, so the setting can no longer be copied along with a database. Users of older versions should
+  upgrade to 2.0.0 (or at least 1.0.2) and install the module as a development dependency only. When
+  upgrading to 2.0.0, remove the old setting with "bin/magento config:delete system/admin/autologin_username".
+severity:
+  - type: CVSS_V3
+    score: "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+affected:
+  - package:
+      ecosystem: Packagist
+      name: yireo/magento2-admin-auto-login
+    ranges:
+      - type: ECOSYSTEM
+        events:
+          - introduced: "1.0.0"
+          - fixed: "1.0.2"
+references:
+  - type: PACKAGE
+    url: https://github.com/yireo/Yireo_AdminAutoLogin
+  - type: FIX
+    url: https://github.com/yireo/Yireo_AdminAutoLogin/releases/tag/1.0.2
+  - type: FIX
+    url: https://github.com/yireo/Yireo_AdminAutoLogin/releases/tag/2.0.0
+database_specific:
+  cwe_ids:
+    - CWE-306
