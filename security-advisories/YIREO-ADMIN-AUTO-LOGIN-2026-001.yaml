@@ -2,7 +2,8 @@ schema_version: "1.6.0"
 id: YIREO-ADMIN-AUTO-LOGIN-2026-001
 published: "2026-11-25T00:00:00Z"
 modified: "2026-11-26T00:00:00Z"
-aliases: []
+aliases:
+  - GHSA-m25f-w7qm-gwm8
 summary: Unauthenticated Admin Panel access when the auto-login setting reaches a non-development environment
 details: >
   In versions 1.0.0 and 1.0.1 the automatic admin login was enabled solely by the database setting
